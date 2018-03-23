@@ -10,20 +10,40 @@ import XCTest
 @testable import Calculator
 
 class CalculatorTests: XCTestCase {
+    var viewController = ViewController()
+
+    
+    // TO DO case P' boy'is
+//    1 + 1 = 2
+//    2 + 2 = 4
+//    4 * 4 = 16
+//    999/0 = Infinity
+//    0/999 = 0
+//    2 - 1 = 1
+//    1 - 2 = -1
+//    1 / 2 = 1.5
+//    3 / 5 = 0.6
+    
+    
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCalculate() {
+        XCTAssertEqual(viewController.calculate(expression: "1+1"), "2")
+        XCTAssertEqual(viewController.calculate(expression: "2+2"), "4")
+        XCTAssertEqual(viewController.calculate(expression: "4*4"), "16")
+        XCTAssertEqual(viewController.calculate(expression: "999/0.0"), "Infinity")
+        XCTAssertEqual(viewController.calculate(expression: "0/999.0"), "0")
+        XCTAssertEqual(viewController.calculate(expression: "2-1"), "1")
+        XCTAssertEqual(viewController.calculate(expression: "1-2"), "-1")
+        XCTAssertEqual(viewController.calculate(expression: "1/2.0"), "0.5")
+        XCTAssertEqual(viewController.calculate(expression: "3/5.0"), "0.6")
     }
     
     func testPerformanceExample() {
