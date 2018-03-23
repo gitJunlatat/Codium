@@ -14,6 +14,7 @@
 		EF18418420610B3400B9DB8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF18418220610B3400B9DB8D /* LaunchScreen.storyboard */; };
 		EF18418F20610B3400B9DB8D /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18418E20610B3400B9DB8D /* CalculatorTests.swift */; };
 		EF18419A20610B3400B9DB8D /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF18419920610B3400B9DB8D /* CalculatorUITests.swift */; };
+		EFB1E82B2064E18F003F738A /* NSExpression+ToFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB1E82A2064E18F003F738A /* NSExpression+ToFormatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		EF18419520610B3400B9DB8D /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF18419920610B3400B9DB8D /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		EF18419B20610B3400B9DB8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB1E82A2064E18F003F738A /* NSExpression+ToFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSExpression+ToFormatter.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EF18417920610B3400B9DB8D /* AppDelegate.swift */,
+				EFB1E82A2064E18F003F738A /* NSExpression+ToFormatter.swift */,
 				EF18417B20610B3400B9DB8D /* ViewController.swift */,
 				EF18417D20610B3400B9DB8D /* Main.storyboard */,
 				EF18418020610B3400B9DB8D /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF18417C20610B3400B9DB8D /* ViewController.swift in Sources */,
+				EFB1E82B2064E18F003F738A /* NSExpression+ToFormatter.swift in Sources */,
 				EF18417A20610B3400B9DB8D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

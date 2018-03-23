@@ -40,6 +40,10 @@
                                     <action selector="checkResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3MC-F5-lbk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="USRjyia6_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-u5-aMZ">
+                                <rect key="frame" x="147" y="65" width="80" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,4 +58,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="USRjyia6_400x400" width="400" height="400"/>
+    </resources>
 </document>

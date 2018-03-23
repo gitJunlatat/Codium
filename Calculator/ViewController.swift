@@ -20,15 +20,16 @@ class ViewController: UIViewController {
     
     func calculate(expression: String) -> String {
         let mathExpression = NSExpression(format: expression)
-        if let mathValue = mathExpression.expressionValue(with: nil, context: nil) as? NSNumber {
+        if let mathValue =  mathExpression.toFloatingPoint().expressionValue(with: nil, context: nil) as? NSNumber {
             if String.init(describing: mathValue.decimalValue) == "NaN" {
                 return "Infinity"
             }else {
                 return String.init(describing: mathValue.decimalValue)
             }
         }else {
-            return "nothing"
+            return "Hey what happen???"
         }
+
     }
 
 
@@ -38,17 +39,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func checkResult(_ sender: Any) {
+        if formular.text?.count ?? 0 < 3 {
+            result.text = "Hey what happen???"
+            return
+        }
         result.text = self.calculate(expression: formular.text!)
     }
 }
-//
-//extension ViewController: UITextFieldDelegate {
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        result.text = self.calculate(expression: textField.text!)
-//        return true
-//    }
-//}
-
-
-
 

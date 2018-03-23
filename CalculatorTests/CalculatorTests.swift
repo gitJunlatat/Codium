@@ -38,12 +38,12 @@ class CalculatorTests: XCTestCase {
         XCTAssertEqual(viewController.calculate(expression: "1+1"), "2")
         XCTAssertEqual(viewController.calculate(expression: "2+2"), "4")
         XCTAssertEqual(viewController.calculate(expression: "4*4"), "16")
-        XCTAssertEqual(viewController.calculate(expression: "999/0.0"), "Infinity")
-        XCTAssertEqual(viewController.calculate(expression: "0/999.0"), "0")
+        XCTAssertEqual(viewController.calculate(expression: "999/0"), "Infinity")
+        XCTAssertEqual(viewController.calculate(expression: "0/999"), "0")
         XCTAssertEqual(viewController.calculate(expression: "2-1"), "1")
         XCTAssertEqual(viewController.calculate(expression: "1-2"), "-1")
-        XCTAssertEqual(viewController.calculate(expression: "1/2.0"), "0.5")
-        XCTAssertEqual(viewController.calculate(expression: "3/5.0"), "0.6")
+        XCTAssertEqual(viewController.calculate(expression: "1/2"), "0.5")
+        XCTAssertEqual(viewController.calculate(expression: "3/5"), "0.6")
     }
     
     func testPerformanceExample() {
