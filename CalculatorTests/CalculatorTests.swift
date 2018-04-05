@@ -23,8 +23,14 @@ class CalculatorTests: XCTestCase {
 //    1 - 2 = -1
 //    1 / 2 = 1.5
 //    3 / 5 = 0.6
-    
-    
+//
+//    1 + 1 + 3 + 5 + 4 = 14
+//    1 * 2 * 3 * 4 * 5 = 120
+//    1 + 2 * 3 - 1 / 20 = 6.95
+//    1 / 20 / 30 * 50 + 10 = 10.0833333333
+//    1 + (29 + 45) * 100 = 7401
+//    1 + 50 / 20 * (1 + 1) = 6
+//    90 / 10 * (20 + 0) - 1 = 179
     
     override func setUp() {
         super.setUp()
@@ -35,15 +41,26 @@ class CalculatorTests: XCTestCase {
     }
     
     func testCalculate() {
-        XCTAssertEqual(viewController.calculate(expression: "1+1"), "2")
-        XCTAssertEqual(viewController.calculate(expression: "2+2"), "4")
-        XCTAssertEqual(viewController.calculate(expression: "4*4"), "16")
-        XCTAssertEqual(viewController.calculate(expression: "999/0"), "Infinity")
-        XCTAssertEqual(viewController.calculate(expression: "0/999"), "0")
-        XCTAssertEqual(viewController.calculate(expression: "2-1"), "1")
-        XCTAssertEqual(viewController.calculate(expression: "1-2"), "-1")
-        XCTAssertEqual(viewController.calculate(expression: "1/2"), "0.5")
-        XCTAssertEqual(viewController.calculate(expression: "3/5"), "0.6")
+        XCTAssertEqual(viewController.actionCal(text: "1+1"), "2.0")
+        XCTAssertEqual(viewController.actionCal(text: "2+2"), "4.0")
+        XCTAssertEqual(viewController.actionCal(text: "4*4"), "16.0")
+        XCTAssertEqual(viewController.actionCal(text: "999/0"), "inf")
+        XCTAssertEqual(viewController.actionCal(text: "0/999"), "0.0")
+        XCTAssertEqual(viewController.actionCal(text: "2-1"), "1.0")
+        XCTAssertEqual(viewController.actionCal(text: "1-2"), "-1.0")
+        XCTAssertEqual(viewController.actionCal(text: "1/2"), "0.5")
+        XCTAssertEqual(viewController.actionCal(text: "3/5"), "0.6")
+        
+        XCTAssertEqual(viewController.actionCal(text: "1 + 1 + 3 + 5 + 4"), "14.0")
+        XCTAssertEqual(viewController.actionCal(text: "1 * 2 * 3 * 4 * 5"), "120.0")
+        XCTAssertEqual(viewController.actionCal(text: "1 + 2 * 3 - 1 / 20"), "6.95")
+        XCTAssertEqual(viewController.actionCal(text: "1 / 20 / 30 * 50 + 10"), "10.0833333333333")
+        
+        XCTAssertEqual(viewController.actionCal(text: "1 + (29 + 45) * 100"), "7401.0")
+        XCTAssertEqual(viewController.actionCal(text: "1 + 50 / 20 * (1 + 1)"), "6.0")
+        XCTAssertEqual(viewController.actionCal(text: "90 / 10 * (20 + 0) - 1"), "179.0")
+
+
     }
     
     func testPerformanceExample() {

@@ -37,7 +37,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Check result"/>
                                 <connections>
-                                    <action selector="checkResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3MC-F5-lbk"/>
+                                    <action selector="checkResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhS-CR-oKA"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="USRjyia6_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="Yzo-u5-aMZ">
