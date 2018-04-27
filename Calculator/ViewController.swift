@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        result.accessibilityIdentifier = "result"
+        formular.accessibilityIdentifier = "formular"
     }
 
     var operationSign = ["/","*","+","-"]
@@ -114,6 +116,8 @@ class ViewController: UIViewController {
     }
     
     func actionCal(text: String) -> String {
+        if text == "" { return "Please input some formular below!" }
+        
         let testdata = text
         var test = testdata.replacingOccurrences(of: " ", with: "")
         for bracket in matchesForRegexInText(text: testdata) {
